@@ -63,3 +63,4 @@ def preprocess_data(file_name):
     print(f"The vocabulary size is: {vocab_size}")
     return vocab, vocab_size
 
+preprocess_data()

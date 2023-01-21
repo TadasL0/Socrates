@@ -30,16 +30,13 @@ def preprocess_data(file_name):
     bot_count = len(bot_responses)
     if user_count != bot_count:
         print(f"Error: The number of user responses is {user_count} and the number of bot responses is {bot_count}.")
-        return None, None
     else:
         print(f"Both lists are of the same length with {user_count} elements each.")
 
     if not user_responses:
         print("Error: The user_responses list is empty.")
-        return None, None
     elif not bot_responses:
         print("Error: The bot_responses list is empty.")
-        return None, None
 
     # Preprocessing the data
     user_responses = [" ".join([word.lower() for word in word_tokenize(response)]) for response in user_responses]
